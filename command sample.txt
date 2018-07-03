@@ -1,0 +1,22 @@
+curl -i -H "Content-Type: application/json" -X POST -d '{"text":"Read a book"}' http://35.192.129.194:5000/classify
+
+curl -i -H "Content-Type: application/json" -X POST -d '{"text":"Read a book"}' http://127.0.0.1:5000/classify
+
+
+sudo gcloud compute scp --recurse myFlaskApp coba-1:/usr/lib/python3.6/dist-packages --zone us-central1-c
+
+
+sudo gcloud compute scp "/Users/constantin/Project/Learn NLP/nltk_data/corpora/chat_logs/all_chat.csv"  coba-1:/usr/lib/python3.6/dist-packages/myFlaskApp --zone us-central1-c
+
+sudo gcloud compute scp "textClassifier.py"  coba-1:/usr/lib/python3.6/dist-packages/myFlaskApp --zone us-central1-c
+
+curl -i -H "Content-Type: application/json" -X POST -d '{"text":"mbak irene masuk lewat web aplikasi gagal","label":"login"}' http://35.192.129.194:5000/addtrain
+
+curl -i -H "Content-Type: application/json" -X POST -d '{"text":"mbak irene masuk lewat web aplikasi gagal","label":"login"}' http://localhost:5000/addtrain
+
+curl -i -H "Content-Type: application/json" -X POST -d '{"pswd":"tintinkeren"}' http://35.192.129.194:5000/retrain
+
+curl -i -H "Content-Type: application/json" -X POST -d '{"pswd":"tintinkeren"}' http://localhost:5000/retrain
+
+
+error=Optional(Error Domain=NSURLErrorDomain Code=-1005 "The network connection was lost." UserInfo={NSUnderlyingError=0x60400044e460 {Error Domain=kCFErrorDomainCFNetwork Code=-1005 "(null)" UserInfo={NSErrorPeerAddressKey=<CFData 0x604000093c40 [0x7fff8e24baf0]>{length = 16, capacity = 16, bytes = 0x100213887f0000010000000000000000}, _kCFStreamErrorCodeKey=-4, _kCFStreamErrorDomainKey=4}}, NSErrorFailingURLStringKey=http://127.0.0.1:5000/retrain, NSErrorFailingURLKey=http://127.0.0.1:5000/retrain, _kCFStreamErrorDomainKey=4, _kCFStreamErrorCodeKey=-4, NSLocalizedDescription=The network connection was lost.})
